@@ -5,14 +5,14 @@ do local _ = {
     "Helper",
     "plugins"
   },
-  info_text = "💥MeGa Plus Bot \n\n▪️Version:\n(TDBot v3.0)\n\n▫️GitHub™\n\nhttps://github.com\n\n》Admins\n》@KingLonely and @SajjadMazini ➣ Founder & Developer\n》@Mohammadzd ➣ Developer\n\n💥Our channel :\n》@MeGaPlusTeaM《\n",
+  info_text = "💥Radical Bot \n\n▪️Version:\n(TDBot v3.0)\n\n▫️GitHub™\n\nhttps://github.com\n\n》Admins\n》@SudoRadical ➣ Founder & Developer\n》@ ➣ Developer\n\n💥Our channel :\n》@RadicalBotTeam《",
   moderation = {
-    data = "/home/megaplus1/MeGaPlus/Cli/data/moderation.json"
+    data = "/home/botm1/MeGaPlus/Cli/data/moderation.json"
   },
   sudo_users = {
-    482089569,
-    488565793,
-    516163430
+    516488530,
+    517517253,
+    482089569
   }
 }
 return _
