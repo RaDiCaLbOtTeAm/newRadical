@@ -1,4 +1,4 @@
---Begin Core.lua By #MeGaPlusTeaM
+--Begin Core.lua By #RadicalBotTeam
 local function getindex(t,id) 
 	for i,v in pairs(t) do 
 		if v == id then 
@@ -13,7 +13,7 @@ local function reload_plugins( )
 	load_plugins() 
 end
 
---By @SajjadMazini
+--By @SudoRadical
 local function already_sudo(user_id)
 	for k,v in pairs(_config.sudo_users) do
 		if user_id == v then
@@ -24,7 +24,7 @@ local function already_sudo(user_id)
 	return false
 end
 
---By @SajjadMazini
+--By @SudoRadical
 local function sudolist(msg)
 	local sudo_users = _config.sudo_users
 	local text = "Sudo Users :\n"
@@ -42,56 +42,56 @@ local lang = redis:get(hash)
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-	        {text = "»Lock List«", callback_data="/settings:"..GP_id},
-			{text = "»Media List«", callback_data="/mutelist:"..GP_id}
+	        {text = " 【Lock List】", callback_data="/settings:"..GP_id},
+			{text = "【Media List】", callback_data="/mutelist:"..GP_id}
 		},
 		{
-			{text = '»More Settings«', callback_data = '/more:'..GP_id}
+			{text = '【More Settings】 ', callback_data = '/more:'..GP_id}
 		},
 		{
-			{text = '»Tv«', callback_data = '/tv:'..GP_id},
-			{text = '»Satellite«', callback_data = '/satellite:'..GP_id}
+			{text = '【Tv】', callback_data = '/tv:'..GP_id},
+			{text = '【Satellite】', callback_data = '/satellite:'..GP_id}
 		},
 		{
-			{text = '»Help.EN«', callback_data = '/helpen:'..GP_id},
-			{text = '»Help.FA«', callback_data = '/helpfa:'..GP_id}
+			{text = '【Help.EN】', callback_data = '/helpen:'..GP_id},
+			{text = '【Help.FA】', callback_data = '/helpfa:'..GP_id}
 		},
 		{
-			{text = '»Shopping«', callback_data = '/shopping:'..GP_id},
-			{text = '»Support«', callback_data = '/support:'..GP_id}
+			{text = ' 【Shopping】', callback_data = '/shopping:'..GP_id},
+			{text = ' 【Support】', callback_data = '/support:'..GP_id}
 		},
 		{
-			{text = '»MeGaPlus«', callback_data = '/megaplus:'..GP_id}
+			{text = '【MeGaPlus】', callback_data = '/megaplus:'..GP_id}
 		},
 		{
 			{text= '➦Back' ,callback_data = '/lang:'..GP_id}
 		}				
 	}
   elseif lang then
-	 text = '_به منو ربات (مگا پلاس) خوش آمدید_'
+	 text = '_به منو ربات (رادیڪال بوت) خوش آمدید_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "»لیست قفل«", callback_data="/settings:"..GP_id},
-			{text = "»لیست رسانه«", callback_data="/mutelist:"..GP_id}
+			{text = "【لیست قفل 】", callback_data="/settings:"..GP_id},
+			{text = "【لیست رسانه 】", callback_data="/mutelist:"..GP_id}
 		},
 		{
-			{text = '»سایر امکانات«', callback_data = '/more:'..GP_id}
+			{text = '【سایر امکانات】 ', callback_data = '/more:'..GP_id}
 		},
 		{
-			{text = '»تلویزیون«', callback_data = '/tv:'..GP_id},
-			{text = '»ماهواره«', callback_data = '/satellite:'..GP_id}
+			{text = '【تلویزیون】', callback_data = '/tv:'..GP_id},
+			{text = '【ماهواره】', callback_data = '/satellite:'..GP_id}
 		},
 		{
-			{text = '»راهنما.انگلیسی«', callback_data = '/helpen:'..GP_id},
-			{text = '»راهنما.فارسی«', callback_data = '/helpfa:'..GP_id}
+			{text = '【راهنما.انگلیسی】', callback_data = '/helpen:'..GP_id},
+			{text = ' 【راهنما.فارسی】', callback_data = '/helpfa:'..GP_id}
 		},
 		{
-			{text = '»خرید ربات«', callback_data = '/shopping:'..GP_id},
-			{text = '»پشتیبانی«', callback_data = '/support:'..GP_id}
+			{text = ' 【خرید ربات】', callback_data = '/shopping:'..GP_id},
+			{text = ' 【پشتیبانی】', callback_data = '/support:'..GP_id}
 		},
 		{
-			{text = '»مگا پلاس«', callback_data = '/megaplus:'..GP_id}
+			{text = '【رادیڪال بوت】', callback_data = '/megaplus:'..GP_id}
 		},
 		{
 			{text= '➦خروج' ,callback_data = '/lang:'..GP_id}
@@ -110,27 +110,27 @@ local settings = data[tostring(GP_id)]["settings"]
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = '〖Flood Sensitivity〗 ', callback_data = 'MeGaPlusTeaM'}
+			{text = '〖Flood Sensitivity〗 ', callback_data = 'RadicalBotTeam'}
 		},
 		{
 			{text = "▲", callback_data='/floodup:'..GP_id}, 
-			{text = tostring(settings.num_msg_max), callback_data="MeGaPlusTeaM"},
+			{text = tostring(settings.num_msg_max), callback_data="RadicalBotTeam"},
 			{text = "▼", callback_data='/flooddown:'..GP_id}
 		},
 		{
-			{text = '〖Character Sensitivity〗 ', callback_data = 'MeGaPlusTeaM'}
+			{text = '〖Character Sensitivity〗 ', callback_data = 'RadicalBotTeam'}
 		},
 		{
 			{text = "▲", callback_data='/charup:'..GP_id}, 
-			{text = tostring(settings.set_char), callback_data="MeGaPlusTeaM"},
+			{text = tostring(settings.set_char), callback_data="RadicalBotTeam"},
 			{text = "▼", callback_data='/chardown:'..GP_id}
 		},
 		{
-			{text = '〖Flood Check Time〗 ', callback_data = 'MeGaPlusTeaM'}
+			{text = '〖Flood Check Time〗 ', callback_data = 'RadicalBotTeam'}
 		},
 		{
 			{text = "▲", callback_data='/floodtimeup:'..GP_id}, 
-			{text = tostring(settings.time_check), callback_data="MeGaPlusTeaM"},
+			{text = tostring(settings.time_check), callback_data="RadicalBotTeam"},
 			{text = "▼", callback_data='/floodtimedown:'..GP_id}
 		},
 		{
@@ -138,31 +138,31 @@ local settings = data[tostring(GP_id)]["settings"]
 		}				
 	}
    elseif lang then
- text = '_به تنظیمات سایر قفل ها (مگا پلاس) خوش آمدید_'
+ text = '_به تنظیمات سایر قفل ها (رادیڪال بوت) خوش آمدید_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = '〖حداکثر پیام های مکرر〗 ', callback_data = 'MeGaPlusTeaM'}
+			{text = '〖حداکثر پیام های مکرر〗 ', callback_data = 'RadicalBotTeam'}
 		},
 		{
 			{text = "▲", callback_data='/floodup:'..GP_id}, 
-			{text = tostring(settings.num_msg_max), callback_data="MeGaPlusTeaM"},
+			{text = tostring(settings.num_msg_max), callback_data="RadicalBotTeam"},
 			{text = "▼", callback_data='/flooddown:'..GP_id}
 		},
 		{
-			{text = '〖حداکثر حروف مجاز〗 ', callback_data = 'MeGaPlusTeaM'}
+			{text = '〖حداکثر حروف مجاز〗 ', callback_data = 'RadicalBotTeam'}
 		},
 		{
 			{text = "▲", callback_data='/charup:'..GP_id}, 
-			{text = tostring(settings.set_char), callback_data="MeGaPlusTeaM"},
+			{text = tostring(settings.set_char), callback_data="RadicalBotTeam"},
 			{text = "▼", callback_data='/chardown:'..GP_id}
 		},
 		{
-			{text = '〖زمان بررسی پیام های مکرر〗 ', callback_data = 'MeGaPlusTeaM'}
+			{text = '〖زمان بررسی پیام های مکرر〗 ', callback_data = 'RadicalBotTeam'}
 		},
 		{
 			{text = "▲", callback_data='/floodtimeup:'..GP_id}, 
-			{text = tostring(settings.time_check), callback_data="MeGaPlusTeaM"},
+			{text = tostring(settings.time_check), callback_data="RadicalBotTeam"},
 			{text = "▼", callback_data='/floodtimedown:'..GP_id}
 		},
 		{
@@ -251,43 +251,43 @@ local lang = redis:get(hash)
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "ᵉᵈⁱᵗ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵉᵈⁱᵗ", callback_data='RadicalBotTeam'}, 
 			{text = lock_edit, callback_data="/lockedit:"..GP_id},
-			{text = "ˡⁱⁿᵏ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ˡⁱⁿᵏ", callback_data='RadicalBotTeam'}, 
 			{text = lock_link, callback_data="/locklink:"..GP_id}
 		},
 		{
-			{text = "ᵗᵃᵍ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵗᵃᵍ", callback_data='RadicalBotTeam'}, 
 			{text = lock_tag, callback_data="/locktags:"..GP_id},
-			{text = "ʲᵒⁱⁿ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ʲᵒⁱⁿ", callback_data='RadicalBotTeam'}, 
 			{text = lock_join, callback_data="/lockjoin:"..GP_id}
 		},
 		{
-			{text = "ᶠˡᵒᵒᵈ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᶠˡᵒᵒᵈ", callback_data='RadicalBotTeam'}, 
 			{text = lock_flood, callback_data="/lockflood:"..GP_id},
-			{text = "ˢᵖᵃᵐ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ˢᵖᵃᵐ", callback_data='RadicalBotTeam'}, 
 			{text = lock_spam, callback_data="/lockspam:"..GP_id}
 		},
 		{
-			{text = "ᵐᵃⁿᵗⁱᵒⁿ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵐᵃⁿᵗⁱᵒⁿ", callback_data='RadicalBotTeam'}, 
 			{text = lock_mention, callback_data="/lockmention:"..GP_id},
-			{text = "ᵃʳᵃᵇⁱᶜ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵃʳᵃᵇⁱᶜ", callback_data='RadicalBotTeam'}, 
 			{text = lock_arabic, callback_data="/lockarabic:"..GP_id}
 		},
 		{
-			{text = "ʷᵉᵇ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ʷᵉᵇ", callback_data='RadicalBotTeam'}, 
 			{text = lock_webpage, callback_data="/lockwebpage:"..GP_id},
-			{text = "ᵐᵃʳᵏᵈᵒʷⁿ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵐᵃʳᵏᵈᵒʷⁿ", callback_data='RadicalBotTeam'}, 
 			{text = lock_markdown, callback_data="/lockmarkdown:"..GP_id}
 		},
 		{
-			{text = "ᵖⁱⁿ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵖⁱⁿ", callback_data='RadicalBotTeam'}, 
 			{text = lock_pin, callback_data="/lockpin:"..GP_id},
-			{text = "ᵇᵒᵗ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵇᵒᵗ", callback_data='RadicalBotTeam'}, 
 			{text = lock_bots, callback_data="/lockbots:"..GP_id}
 		},
 		{
-			{text = "〖ʷᵉˡᶜᵒᵐᵉ〗", callback_data='MeGaPlusTeaM'}, 
+			{text = "〖ʷᵉˡᶜᵒᵐᵉ〗", callback_data='RadicalBotTeam'}, 
 			{text = group_welcone, callback_data="/welcome:"..GP_id}
 		},
 		{
@@ -298,47 +298,47 @@ local lang = redis:get(hash)
 		}				
 	}
      elseif lang then
- text = '_به تنظیمات قفل ها (مگا پلاس) گروه خوش آمدید_'
+ text = '_به تنظیمات قفل ها (رادیڪال بوت) گروه خوش آمدید_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "ویرایش", callback_data='MeGaPlusTeaM'}, 
+			{text = "ویرایش", callback_data='RadicalBotTeam'}, 
 			{text = lock_edit, callback_data="/lockedit:"..GP_id},
-			{text = "لینک", callback_data='MeGaPlusTeaM'}, 
+			{text = "لینک", callback_data='RadicalBotTeam'}, 
 			{text = lock_link, callback_data="/locklink:"..GP_id}
 		},
 		{
-			{text = "تگ", callback_data='MeGaPlusTeaM'}, 
+			{text = "تگ", callback_data='RadicalBotTeam'}, 
 			{text = lock_tag, callback_data="/locktags:"..GP_id},
-			{text = "ورود", callback_data='MeGaPlusTeaM'}, 
+			{text = "ورود", callback_data='RadicalBotTeam'}, 
 			{text = lock_join, callback_data="/lockjoin:"..GP_id}
 		},
 		{
-			{text = "فلود", callback_data='MeGaPlusTeaM'}, 
+			{text = "فلود", callback_data='RadicalBotTeam'}, 
 			{text = lock_flood, callback_data="/lockflood:"..GP_id},
-			{text = "اسپم", callback_data='MeGaPlusTeaM'}, 
+			{text = "اسپم", callback_data='RadicalBotTeam'}, 
 			{text = lock_spam, callback_data="/lockspam:"..GP_id}
 		},
 		{
-			{text = "فراخوانی", callback_data='MeGaPlusTeaM'}, 
+			{text = "فراخوانی", callback_data='RadicalBotTeam'}, 
 			{text = lock_mention, callback_data="/lockmention:"..GP_id},
-			{text = "عربی", callback_data='MeGaPlusTeaM'}, 
+			{text = "عربی", callback_data='RadicalBotTeam'}, 
 			{text = lock_arabic, callback_data="/lockarabic:"..GP_id}
 		},
 		{
-			{text = "وب", callback_data='MeGaPlusTeaM'}, 
+			{text = "وب", callback_data='RadicalBotTeam'}, 
 			{text = lock_webpage, callback_data="/lockwebpage:"..GP_id},
-			{text = "فونت", callback_data='MeGaPlusTeaM'}, 
+			{text = "فونت", callback_data='RadicalBotTeam'}, 
 			{text = lock_markdown, callback_data="/lockmarkdown:"..GP_id}
 		},
 		{
-			{text = "سنجاق", callback_data='MeGaPlusTeaM'}, 
+			{text = "سنجاق", callback_data='RadicalBotTeam'}, 
 			{text = lock_pin, callback_data="/lockpin:"..GP_id},
-			{text = "ربات", callback_data='MeGaPlusTeaM'}, 
+			{text = "ربات", callback_data='RadicalBotTeam'}, 
 			{text = lock_bots, callback_data="/lockbots:"..GP_id}
 		},
 		{
-			{text = "〖خوشامد〗", callback_data='MeGaPlusTeaM'}, 
+			{text = "〖خوشامد〗", callback_data='RadicalBotTeam'}, 
 			{text = group_welcone, callback_data="/welcome:"..GP_id}
 		},
 		{
@@ -445,51 +445,51 @@ local lang = redis:get(hash)
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "ᵍᵒʳᵘᵖ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵍᵒʳᵘᵖ", callback_data='RadicalBotTeam'}, 
 			{text = mute_all, callback_data="/muteall:"..GP_id},
-			{text = "ᵍⁱᶠ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵍⁱᶠ", callback_data='RadicalBotTeam'}, 
 			{text = mute_gif, callback_data="/mutegif:"..GP_id}
 		},
 		{
-			{text = "ᵗᵉˣᵗ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵗᵉˣᵗ", callback_data='RadicalBotTeam'}, 
 			{text = mute_text, callback_data="/mutetext:"..GP_id},
-			{text = "ⁱⁿˡⁱⁿᵉ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ⁱⁿˡⁱⁿᵉ", callback_data='RadicalBotTeam'}, 
 			{text = mute_inline, callback_data="/muteinline:"..GP_id}
 		},
 		{
-			{text = "ᵍᵃᵐᵉ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵍᵃᵐᵉ", callback_data='RadicalBotTeam'}, 
 			{text = mute_game, callback_data="/mutegame:"..GP_id},
-			{text = "ᵖʰᵒᵗᵒ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵖʰᵒᵗᵒ", callback_data='RadicalBotTeam'}, 
 			{text = mute_photo, callback_data="/mutephoto:"..GP_id}
 		},
 		{
-			{text = "ᵛⁱᵈᵉᵒ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵛⁱᵈᵉᵒ", callback_data='RadicalBotTeam'}, 
 			{text = mute_video, callback_data="/mutevideo:"..GP_id},
-			{text = "ᵃᵘᵈⁱᵒ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵃᵘᵈⁱᵒ", callback_data='RadicalBotTeam'}, 
 			{text = mute_audio, callback_data="/muteaudio:"..GP_id}
 		},
 		{
-			{text = "ᵛᵒⁱᶜᵉ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵛᵒⁱᶜᵉ", callback_data='RadicalBotTeam'}, 
 			{text = mute_voice, callback_data="/mutevoice:"..GP_id},
-			{text = "ˢᵗⁱᶜᵏᵉʳ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ˢᵗⁱᶜᵏᵉʳ", callback_data='RadicalBotTeam'}, 
 			{text = mute_sticker, callback_data="/mutesticker:"..GP_id}
 		},
 		{
-			{text = "ᶜᵒⁿᵗᵃᶜᵗ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᶜᵒⁿᵗᵃᶜᵗ", callback_data='RadicalBotTeam'}, 
 			{text = mute_contact, callback_data="/mutecontact:"..GP_id},
-			{text = "ᶠᵒʳʷᵃʳᵈ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᶠᵒʳʷᵃʳᵈ", callback_data='RadicalBotTeam'}, 
 			{text = mute_forward, callback_data="/muteforward:"..GP_id}
 		},
 		{
-			{text = "ˡᵒᶜᵃᵗⁱᵒⁿ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ˡᵒᶜᵃᵗⁱᵒⁿ", callback_data='RadicalBotTeam'}, 
 			{text = mute_location, callback_data="/mutelocation:"..GP_id},
-			{text = "ᵈᵒᶜᵘᵐᵉⁿᵗ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵈᵒᶜᵘᵐᵉⁿᵗ", callback_data='RadicalBotTeam'}, 
 			{text = mute_document, callback_data="/mutedocument:"..GP_id}
 		},
 		{
-			{text = "ᵗᵍˢᵉʳᵛⁱᶜᵉ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵗᵍˢᵉʳᵛⁱᶜᵉ", callback_data='RadicalBotTeam'}, 
 			{text = mute_tgservice, callback_data="/mutetgservice:"..GP_id},
-			{text = "ᵏᵉʸᵇᵒᵃʳᵈ", callback_data='MeGaPlusTeaM'}, 
+			{text = "ᵏᵉʸᵇᵒᵃʳᵈ", callback_data='RadicalBotTeam'}, 
 			{text = mute_keyboard, callback_data="/mutekeyboard:"..GP_id}
 		},
 		{
@@ -497,55 +497,55 @@ local lang = redis:get(hash)
 		}				
 	}
    elseif lang then
-	 text = '_به لیست بیصدای (مگا پلاس) گروه خوش آمدید_'
+	 text = '_به لیست بیصدای (رادیڪال بوت) گروه خوش آمدید_'
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "گروه", callback_data='MeGaPlusTeaM'}, 
+			{text = "گروه", callback_data='RadicalBotTeam'}, 
 			{text = mute_all, callback_data="/muteall:"..GP_id},
-			{text = "گیف", callback_data='MeGaPlusTeaM'}, 
+			{text = "گیف", callback_data='RadicalBotTeam'}, 
 			{text = mute_gif, callback_data="/mutegif:"..GP_id}
 		},
 		{
-			{text = "متن", callback_data='MeGaPlusTeaM'}, 
+			{text = "متن", callback_data='RadicalBotTeam'}, 
 			{text = mute_text, callback_data="/mutetext:"..GP_id},
-			{text = "اینلاین", callback_data='MeGaPlusTeaM'}, 
+			{text = "اینلاین", callback_data='RadicalBotTeam'}, 
 			{text = mute_inline, callback_data="/muteinline:"..GP_id}
 		},
 		{
-			{text = "بازی", callback_data='MeGaPlusTeaM'}, 
+			{text = "بازی", callback_data='RadicalBotTeam'}, 
 			{text = mute_game, callback_data="/mutegame:"..GP_id},
-			{text = "عکس", callback_data='MeGaPlusTeaM'}, 
+			{text = "عکس", callback_data='RadicalBotTeam'}, 
 			{text = mute_photo, callback_data="/mutephoto:"..GP_id}
 		},
 		{
-			{text = "فیلم", callback_data='MeGaPlusTeaM'}, 
+			{text = "فیلم", callback_data='RadicalBotTeam'}, 
 			{text = mute_video, callback_data="/mutevideo:"..GP_id},
-			{text = "آهنگ", callback_data='MeGaPlusTeaM'}, 
+			{text = "آهنگ", callback_data='RadicalBotTeam'}, 
 			{text = mute_audio, callback_data="/muteaudio:"..GP_id}
 		},
 		{
-			{text = "صدا", callback_data='MeGaPlusTeaM'}, 
+			{text = "صدا", callback_data='RadicalBotTeam'}, 
 			{text = mute_voice, callback_data="/mutevoice:"..GP_id},
-			{text = "استیکر", callback_data='MeGaPlusTeaM'}, 
+			{text = "استیکر", callback_data='RadicalBotTeam'}, 
 			{text = mute_sticker, callback_data="/mutesticker:"..GP_id}
 		},
 		{
-			{text = "مخاطب", callback_data='MeGaPlusTeaM'}, 
+			{text = "مخاطب", callback_data='RadicalBotTeam'}, 
 			{text = mute_contact, callback_data="/mutecontact:"..GP_id},
-			{text =  "فوروارد", callback_data='MeGaPlusTeaM'}, 
+			{text =  "فوروارد", callback_data='RadicalBotTeam'}, 
 			{text = mutes.mute_forward, callback_data="/muteforward:"..GP_id}
 		},
 		{
-			{text = "موقعیت", callback_data='MeGaPlusTeaM'}, 
+			{text = "موقعیت", callback_data='RadicalBotTeam'}, 
 			{text = mute_location, callback_data="/mutelocation:"..GP_id},
-			{text = "فایل", callback_data='MeGaPlusTeaM'}, 
+			{text = "فایل", callback_data='RadicalBotTeam'}, 
 			{text = mute_document, callback_data="/mutedocument:"..GP_id}
 		},
 		{
-			{text = "سرویس", callback_data='MeGaPlusTeaM'}, 
+			{text = "سرویس", callback_data='RadicalBotTeam'}, 
 			{text = mute_tgservice, callback_data="/mutetgservice:"..GP_id},
-			{text = "کیبورد", callback_data='MeGaPlusTeaM'}, 
+			{text = "کیبورد", callback_data='RadicalBotTeam'}, 
 			{text = mute_keyboard, callback_data="/mutekeyboard:"..GP_id}
 		},
 		{
@@ -2356,9 +2356,9 @@ if matches[1] == '/rules' then
 		local rules = data[tostring(matches[2])]['rules']
 		if not rules then
    if not lang then
-     text = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@MeGaPlusTeaM"
+     text = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@RadicalBotTeam"
     elseif lang then
-       text = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@MeGaPlusTeaM"
+       text = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود.\n@RadicalBotTeam"
  end
 		elseif rules then
      if not lang then
@@ -2619,7 +2619,7 @@ end
 end
          -- ####################### TV Iran ####################### --
 if matches[1] == '/tv' then 
-		local text = 'به بخش تلویزیون ربات (مگا پلاس) خوش امدید'
+		local text = 'به بخش تلویزیون ربات (رادیڪال بوت) خوش امدید'
     if not lang then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
@@ -2689,7 +2689,7 @@ if matches[1] == '/tv' then
 end
          -- ####################### Satellite ####################### --
 if matches[1] == '/satellite' then 
-		local text = 'به بخش تلویزیون ربات (مگا پلاس) خوش امدید'
+		local text = 'به بخش تلویزیون ربات (رادیڪال بوت) خوش امدید'
     if not lang then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
@@ -2766,7 +2766,7 @@ end
 if matches[1] == '/reminder' then
 local text = [[💥لطفا قبل از استفاده از این بخش فیلتر شکن گوشی خود را روشن کنید 
 *کانال ما:*
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -2791,7 +2791,7 @@ if matches[1] == '/megaplus' then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "〖Developer〗", callback_data="/sajjad:"..matches[2]}, 
+			{text = "〖Developer〗", callback_data="/ghasemi:"..matches[2]}, 
 			{text = "〖Version〗", callback_data="/version:"..matches[2]}
 		},
 		{
@@ -2805,7 +2805,7 @@ if matches[1] == '/megaplus' then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "〖سازنده〗", callback_data="/sajjad:"..matches[2]}, 
+			{text = "〖سازنده〗", callback_data="/ghasemi:"..matches[2]}, 
 			{text = "〖ورژن ربات〗", callback_data="/version:"..matches[2]}
 		},
 		{
@@ -2819,14 +2819,14 @@ if matches[1] == '/megaplus' then
     edit_inline(msg.message_id, text, keyboard)
 end
 
-if matches[1] == '/sajjad' then
-local text = [[*》Sajjad Mazini Information《*
-_》Age :《_ *16*
-_》Name :《_ *Sajjad Mazini*
-_》City :《_ *Gorgan*
+if matches[1] == '/ghasemi' then
+local text = [[*》Radical  Information《*
+_》Age :《_ *32*
+_》Name :《_ *Asghar Ghasemi*
+_》City :《_ *Qom*
 *-------------------------*
-_》Pv :《_ @SajjadMazini and @KingLonely
-_》Bot :《_ @MeGaPlusSupportBot
+_》Pv :《_ @SudoRadical  
+_》Bot :《_ @SudoRadicalBot
 *-------------------------*
 *》Expertise :《*
 _》_*Lua & Php*, *Cli* `and` *Api* _Bots_
@@ -2849,18 +2849,18 @@ _》_*Lua & Php*, *Cli* `and` *Api* _Bots_
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/version' then
-local text = [[*💥Robot Specification (Mega Plus)*
+local text = [[*💥Robot Specification (RadicalBot)*
 
 *Robot Version:* TDBOT v ( 3.0 )
 
 *Developer:*
-@kingLonely
-@SajjadMazini
+
+@SudoRadical
 
 Bot rules are enabled with the *( botrules )* command
 
 *Channel:*
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -2879,25 +2879,25 @@ Bot rules are enabled with the *( botrules )* command
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/botrules' then
-local text = [[💥قوانین ربات (مگا پلاس)
+local text = [[💥قوانین ربات (رادیڪال بوت)
 
 1.حذف کردن ربات به هر بهانه مورد قبول نیست و برای نصب دوباره مبلغ 5000هزار تومان کسر میشود
 
 2.خرید ربات از هر شخصی جز 
-[ @SajjadMazini ] 
+[ @SudoRadical ] 
 به تیم ما ربطی ندارد
 
 3.پاک شدن گروه شما با فیلتر شدن ان به ما ربطی ندارد و باید ربات دوباره خریداری شود
 
-روز خوبی داشته باشید با مگا پلاس تیم
+روز خوبی داشته باشید با رادیڪال بوت تیم
 
 توسعه دهنده:
-@kingLonely
-@SajjadMazini
-@MeGaPlusSupportBot
+
+@SudoRadical
+@SudoRadicalBot
 
 کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -2917,21 +2917,17 @@ local text = [[💥قوانین ربات (مگا پلاس)
 end
          -- ####################### Buy Bot ####################### --
 if matches[1] == '/support' then
-	local text = 'به بخش پشتیبانی ربات (مگا پلاس) خوش امدید'
+	local text = 'به بخش پشتیبانی ربات (رادیڪال بوت) خوش امدید'
     if not lang then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = '〖Developer〗', url = 'https://t.me/sajjadmazini'},
-			{text = '〖BotDev〗', url = 'https://t.me/sajjadmazinibot'}
+			{text = '〖Support 〗', url = 'https://t.me/SudoRadical'},
+			{text = '〖BotSupport〗', url = 'https://t.me/sudoradicalbot'}
 		},
 		{
-			{text = '〖Support 〗', url = 'https://t.me/kinglonely'},
-			{text = '〖BotSupport〗', url = 'https://t.me/megaplussupportbot'}
-		},
-		{
-			{text = '〖GpSupport〗', url = 'https://t.me/joinchat/HLwaYVJcInptFPbGgYB-2A'},
-			{text = '〖BotChannel〗', url = 'https://t.me/megaplusteam'}
+			{text = '〖GpSupport〗', url = 'https://t.me/joinchat/Hsj9UkvwLAfAs2WM2ZxXtQ'},
+			{text = '〖BotChannel〗', url = 'https://t.me/RadicalBotTeam'}
 		},
 		{
 			{text= '➦Back' ,callback_data = '/option:'..matches[2]}
@@ -2941,16 +2937,12 @@ if matches[1] == '/support' then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = '〖برنامه نویس 〗', url = 'https://t.me/sajjadmazini'},
-			{text = '〖پـیـامرسـان〗', url = 'https://t.me/sajjadmazinibot'}
+			{text = '〖پــشـتـیـبـانـی 〗', url = 'https://t.me/SudoRadical'},
+			{text = '〖پـیـامرسـان〗', url = 'https://t.me/sudoradicalbot'}
 		},
 		{
-			{text = '〖پــشـتـیـبـانـی 〗', url = 'https://t.me/kinglonely'},
-			{text = '〖پـیـامرسـان〗', url = 'https://t.me/megaplussupportbot'}
-		},
-		{
-			{text = '〖گپ پشتیبانی〗', url = 'https://t.me/joinchat/HLwaYVJcInptFPbGgYB-2A'},
-			{text = '〖کـــانـال ربـات〗', url = 'https://t.me/megaplusteam'}
+			{text = '〖گــروه پـشتیـبان〗', url = 'https://t.me/joinchat/Hsj9UkvwLAfAs2WM2ZxXtQ'},
+			{text = '〖کـــانـال ربـات〗', url = 'https://t.me/RadicalBotTeam'}
 		},
 		{
 			{text= '➦بازگشت' ,callback_data = '/option:'..matches[2]}
@@ -2961,7 +2953,7 @@ if matches[1] == '/support' then
 end
          -- ####################### Buy Bot ####################### --
 if matches[1] == '/shopping' then
-	local text = 'به بخش خرید خودکار ربات (مگا پلاس) خوش امدید'
+	local text = 'به بخش خرید خودکار ربات (رادیڪال بوت) خوش امدید'
     if not lang then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
@@ -2973,12 +2965,12 @@ if matches[1] == '/shopping' then
 			{text = "〖Card Number〗", callback_data="/cardnumber:"..matches[2]}
 		},
 		{
-			{text = '〖Month① 〗', url = 'https://idpay.ir/megaplus/80000'},
-			{text = '〖Month②〗', url = 'https://idpay.ir/megaplus/150000'}
+			{text = '〖Month① 〗', url = 'https://idpay.ir/RADICALBOT/80000'},
+			{text = '〖Month②〗', url = 'https://idpay.ir/RADICALBOT/150000'}
 		},
 		{
-			{text = '〖Month③〗', url = 'https://idpay.ir/megaplus/200000'},
-			{text = '〖Month④〗', url = 'https://idpay.ir/megaplus/250000'}
+			{text = '〖Month③〗', url = 'https://idpay.ir/RADICALBOT/200000'},
+			{text = '〖Month④〗', url = 'https://idpay.ir/RADICALBOT/250000'}
 		},
 		{
 			{text= '➦Back' ,callback_data = '/option:'..matches[2]}
@@ -2992,15 +2984,15 @@ if matches[1] == '/shopping' then
 			{text = "〖امکانات ربات〗", callback_data="/features:"..matches[2]}
 		},
 		{
-			{text = "〖شماره کارت〗", callback_data="/carnumber:"..matches[2]}
+			{text = "〖شماره کارت〗", callback_data="/cardnumber:"..matches[2]}
 		},
 		{
-			{text = '〖مـــاهــه① 〗', url = 'https://idpay.ir/megaplus/80000'},
-			{text = '〖مـــاهــه②〗', url = 'https://idpay.ir/megaplus/150000'}
+			{text = '〖مـــاهــه① 〗', url = 'https://idpay.ir/RADICALBOT/80000'},
+			{text = '〖مـــاهــه②〗', url = 'https://idpay.ir/RADICALBOT/150000'}
 		},
 		{
-			{text = '〖مـــاهــه③〗', url = 'https://idpay.ir/megaplus/200000'},
-			{text = '〖مـــاهــه④〗', url = 'https://idpay.ir/megaplus/250000'}
+			{text = '〖مـــاهــه③〗', url = 'https://idpay.ir/RADICALBOT/200000'},
+			{text = '〖مـــاهــه④〗', url = 'https://idpay.ir/RADICALBOT/250000'}
 		},
 		{
 			{text= '➦بازگشت' ,callback_data = '/option:'..matches[2]}
@@ -3011,7 +3003,7 @@ if matches[1] == '/shopping' then
 end
 
 if matches[1] == '/nerkh' then
-local text = [[💵 نرخ ربات (مگا پلاس) 
+local text = [[💵 نرخ ربات (رادیڪال بوت) 
 
 💥️ برای تمام گروه ها‌
 
@@ -3025,12 +3017,11 @@ local text = [[💵 نرخ ربات (مگا پلاس)
 ➖توجه داشته باشید ربات ما بدلیل سرعت بالا و امکانات فراوان ربات دائمی نداریم
 
 لطفا پس از خرید از صفحه پرداخت عکس گرفته و به ایدی زیر ارسال کنید
-@SajjadMazini
-@KingLonely
-@MeGaPlusSupportBot
+@sudoradicalbot
+@SudoRadical
 
 کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3049,8 +3040,8 @@ local text = [[💵 نرخ ربات (مگا پلاس)
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/features' then
-local text = [[💥ربات ضد اسپم یا ضد لینک (مگا پلاس) هم میتواند مانند یکی از ادمینهای یک سوپر گروه کار کند و گروهتان را مدیریت کند
-    کاربرد ربات ضد اسپم (مگا پلاس) میتواند خیلی چیزا مانند مدیرتی یا تفریحی باشد
+local text = [[💥ربات ضد اسپم یا ضد لینک (رادیڪال بوت) هم میتواند مانند یکی از ادمینهای یک سوپر گروه کار کند و گروهتان را مدیریت کند
+    کاربرد ربات ضد اسپم (رادیڪال بوت) میتواند خیلی چیزا مانند مدیرتی یا تفریحی باشد
 
     ▎○1. مدیریت گروه وقتی شما خواب هستید
     ▎●2. نمایش اطلاعات گروه
@@ -3088,12 +3079,12 @@ local text = [[💥ربات ضد اسپم یا ضد لینک (مگا پلاس) �
     یعنی کدام فعال باشند و کدام نباشند
 
     سوالات خود را با مدیریت در میان بگذارید
-@SajjadMazini
-@KingLonely
-@MeGaPlusSupportBot
+@SudoRadical
+
+@SudoRadicalBot
 
 *کانال ما:*
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3112,17 +3103,17 @@ local text = [[💥ربات ضد اسپم یا ضد لینک (مگا پلاس) �
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/cardnumber' then
-local text = [[💥Card number to buy a robot (mega plus) 
+local text = [[💥Card number to buy a robot (RadicalBot) 
 
- 6277-6012-2451-1582
-سجاد مزینی
-پست بانک
+ *6037-7016-6104-4351*
+اصغر قاسمی
+بانک کشاورزی
 لطفا عکس را به ایدی زیر ارسال کنید
-@KingLonely
-@SajjadMazini
-@MeGaPlusSupportBot
+
+@SudoRadical
+@SudoRadicalBot
 کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3142,7 +3133,7 @@ local text = [[💥Card number to buy a robot (mega plus)
 end
          -- ####################### Help ####################### --
 if matches[1] == '/helpen' then
-	local text = 'به بخش راهنما انگلیسی ربات (مگا پلاس) خوش امدید'
+	local text = 'به بخش راهنما انگلیسی ربات (رادیڪال بوت) خوش امدید'
     if not lang then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
@@ -3304,9 +3295,9 @@ local text = [[*💥MeGaPlus Sudo  Help*
 ▎○leave `[GroupID]`
 ▎`Leave Bot From Specific Group`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅By: @KingLonely and @SajjadMazini
+🏅By:  and @SudoRadical
 🏅Channel: 
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3336,9 +3327,9 @@ local text = [[*💥MeGaPlus Lock Help*
 
 ▎●unlock `[link | tag | edit | arabic | webpage | bots | spam | flood | markdown | mention | pin | join]`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅By: @KingLonely and @SajjadMazini
+🏅By:  and @SudoRadical
 🏅Channel:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3368,9 +3359,9 @@ local text = [[*💥MeGaPlus MediaLock Help*
 
 ▎●unmute `[gif | photo | document | sticker | keyboard | video | video_note | text | forward | location | audio | voice | contact | group]`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅By: @KingLonely and @SajjadMazini
+🏅By:  and @SudoRadical
 🏅Channel:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3389,7 +3380,127 @@ local text = [[*💥MeGaPlus MediaLock Help*
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helpmod' then
-local text = [[text]]
+local text = [[*💥RadicalBot Lock Help*
+
+*!setowner* [username|id|reply] 
+_Set Group Owner(Multi Owner)_
+
+*!remowner* [username|id|reply] 
+ _Remove User From Owner List_
+
+*!promote* [username|id|reply] 
+_Promote User To Group Admin_
+
+*!demote* [username|id|reply] 
+_Demote User From Group Admins List_
+
+*!setflood* [1-50]
+_Set Flooding Number_
+
+*!setchar* [Number]
+_Set Flooding Characters_
+
+*!setfloodtime* [1-10]
+_Set Flooding Time_
+
+*!silent* [username|id|reply] 
+_Silent User From Group_
+
+*!unsilent* [username|id|reply] 
+_Unsilent User From Group_
+
+*!kick* [username|id|reply] 
+_Kick User From Group_
+
+*!ban* [username|id|reply] 
+_Ban User From Group_
+
+*!unban* [username|id|reply] 
+_UnBan User From Group_
+
+*!whitelist* [+-] [username|id|reply] 
+_Add Or Remove User From White List_
+
+*!res* [username]
+_Show User ID_
+
+*!id* [reply]
+_Show User ID_
+
+*!whois* [id]
+_Show User's Username And Name_
+
+*!filter* [word]
+_Word filter_
+
+*!unfilter* [word]
+_Word unfilter_
+
+*!pin* [reply]
+_Pin Your Message_
+
+*!unpin* 
+_Unpin Pinned Message_
+
+*!welcome enable/disable*
+_Enable Or Disable Group Welcome_
+
+*!settings1*
+_Show Group Settings_
+
+*!settings2*
+_Show Mutes List_
+
+*!silentlist*
+_Show Silented Users List_
+
+*!filters*
+_Show Filtered Words List_
+
+*!banlist*
+_Show Banned Users List_
+
+*!owners*
+_Show Group Owners List_ 
+
+*!mods* 
+_Show Group Moderators List_
+
+*!vips* 
+_Show Group White List Users_
+
+*!rules*
+_Show Group Rules_
+
+*!about*
+_Show Group Description_
+
+*!id*
+_Show Your And Chat ID_
+
+*!gpinfo*
+_Show Group Information_
+
+*!newlink*
+_Create A New Link_
+
+*!link*
+_Show Group Link_
+
+*!linkpv*
+_Send Group Link In Your Private Message_
+
+*!setwelcome [text]*
+_set Welcome Message_
+
+*!setlang [fa | en]*
+_Set Persian/English Language_
+
+*!setcmd [fa | en]*
+_Set CMD Persian/English Language_
+﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
+🏅By:  and @SudoRadical
+🏅Channel:]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3443,9 +3554,9 @@ local text = [[*💥MeGaPlus Fun Help*
 ▎○weather `[city]`
 ▎`Get weather`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅By: @KingLonely and @SajjadMazini
+🏅By:  and @SudoRadical
 🏅Channel:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3484,9 +3595,9 @@ local text = [[*💥MeGaPlus Payment gateway Help*
 ▎○card number
 ▎`Get a card number` 
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅By: @KingLonely and @SajjadMazini
+🏅By:  and @SudoRadical
 🏅Channel:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3522,9 +3633,9 @@ local text = [[*💥MeGaPlus GpAddUser  Help*
 ▎○addpm {on-off}
 ▎`Turned off the forced force`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅By: @KingLonely and @SajjadMazini
+🏅By:  and @SudoRadical
 🏅Channel:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3563,7 +3674,7 @@ local text = [[text]]
 end
          -- ####################### Help ####################### --
 if matches[1] == '/helpfa' then
-	local text = 'به بخش راهنما فارسی ربات (مگا پلاس) خوش امدید'
+	local text = 'به بخش راهنما فارسی ربات (رادیڪال بوت) خوش امدید'
     if not lang then
 	keyboard = {} 
 	keyboard.inline_keyboard = {
@@ -3619,7 +3730,7 @@ if matches[1] == '/helpfa' then
 end
 
 if matches[1] == '/helpsudofa' then
-local text = [[*💥راهنما سودو (مگا پلاس)*
+local text = [[*💥راهنما سودو (رادیڪال بوت)*
 
 ▎ ○نصب
 ▎ `اضافه کردن گروه به لیست گروه مدیریتی ربات`
@@ -3726,9 +3837,9 @@ local text = [[*💥راهنما سودو (مگا پلاس)*
 ▎ ○خروج از گروه `[Gpid]`
 ▎ `خارج شدن ربات از گروه مورد نظر`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅سازنده: @KingLonely and @SajjadMazini
+🏅سازنده:  and @SudoRadical
 🏅کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3747,7 +3858,7 @@ local text = [[*💥راهنما سودو (مگا پلاس)*
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helplockfa' then
-local text = [[*💥راهنما قفلی (مگا پلاس)*
+local text = [[*💥راهنما قفلی (رادیڪال بوت)*
 
 *فعال سازی قفل ها🔐*
 
@@ -3758,9 +3869,9 @@ local text = [[*💥راهنما قفلی (مگا پلاس)*
 
 ▎ ●باز کردن `[لینک | تگ | ویرایش | عربی | وب | ربات | اسپم | فلود | فونت | فراخوانی | سنجاق | جوین]`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅سازنده: @KingLonely and @SajjadMazini
+🏅سازنده:  and @SudoRadical
 🏅کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3779,7 +3890,7 @@ local text = [[*💥راهنما قفلی (مگا پلاس)*
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helpmediafa' then
-local text = [[*💥راهنما قفل رسانه (مگا پلاس)*
+local text = [[*💥راهنما قفل رسانه (رادیڪال بوت)*
 
 *فعال سازی ممنوعیت ها🔇*
 
@@ -3790,9 +3901,9 @@ local text = [[*💥راهنما قفل رسانه (مگا پلاس)*
 
 ▎ ●باصدا `[گروه | گیف | عکس | فایل | استیکر | کیبورد | فیلم | فیلم سلفی | متن | فوروارد | موقعیت | اهنگ | ویس | مخاطب | شیشه ای | بازی | سرویس]`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅سازنده: @KingLonely and @SajjadMazini
+🏅سازنده:  and @SudoRadical
 🏅کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3811,7 +3922,130 @@ local text = [[*💥راهنما قفل رسانه (مگا پلاس)*
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helpmodfa' then
-local text = [[text]]
+local text = [[*💥راهنما مدیریتی (رادیڪال بوت)*
+
+▎ ○صاحب `[id]` 
+▎ ●`تنظیم مالک برای گروه`
+
+▎ ○حذف صاحب` [id] `
+▎ ●`حذف مالک گروه`
+
+▎ ○تنظیم مدیر` [id] `
+▎ ●`تنظیم ادمین گروه`
+
+▎ ○حذف مدیر `[id] `
+▎ ●`حذف ادمین گروه`
+
+▎ ○تنظیم پیام مکرر` [1-50]`
+▎ ●`تنظیم فلود`
+
+▎ ○حداکثر حروف مجاز `[عدد]`
+▎ ●`تنظیم حروف مجاز`
+
+▎ ○تنظیم زمان بررسی` [1-10]`
+▎ ●`تنظیم زمان برسی`
+
+▎ ○سکوت` [reply] `
+▎ ●`سکوت کردن کاربر`
+
+▎ ○حذف سکوت` [reply] `
+▎ ●`حذف کردن کاربر از سکوت`
+
+▎ ○اخراج` [id] `
+▎ ●`اخراج کاربر`
+
+▎ ○مسدود` [id] `
+▎ ●`مسدود کاربر`
+
+▎ ○حذف مسدود `[id] `
+▎ ●`حذف کردن کاربر از مسدود`
+
+▎ ○ویژه` [+-] [relpy] `
+▎ ●`ویژه کردن کاربر`
+
+▎ ○کاربری` [username]`
+▎ ●`دریافت شناسه`
+
+▎ ○ایدی` [reply]`
+▎ ●`دریافت شناسه`
+
+▎ ○شناسه` [id]`
+▎ ●`دریافت شناسه و یوزرنیم`
+
+▎ ○فیلتر` [word]`
+▎ ●`فیلتر کردن کلمه`
+
+▎ ○حذف فیلتر` [word]`
+▎ ●`حذف کردن  از لیستر فیلتر`
+
+▎ ○سنجاق `[reply]`
+▎ ●`سنجاق کردن پیام`
+
+▎ ○حذف سنجاق 
+▎ ●`حذف کردن سنجاق`
+
+▎ ○خوشامد +/-
+▎ ●`خاموش | روشن کردن خوش آمدگویی`
+
+▎ ○تنظیمات1
+▎ ●`تنظیمات قفلی`
+
+▎ ○تنظیمات2
+▎ ●`تنظیمات رسانه`
+
+▎ ○سکوت ها
+▎ ●`لیست کاربران محروم از چت `
+
+▎ ○فیلتر ها
+▎ ●`لیست کلمات غیرمجاز`
+
+▎ ○مسدود ها
+▎ ●`لیست مسدود ها`
+
+▎ ○صاحب ها
+▎ ●`لیست مالکان`
+
+▎ ○مدیران 
+▎ ●`لیست مدیران`
+
+▎ ○ویژه ها
+▎ ●`لیست کاربران ویژه`
+
+▎ ○قوانین
+▎ ●`قوانین گروه`
+
+▎ ○درباره
+▎ ●`نمایش درباره گروه`
+
+▎ ○ایدی
+▎ ●`نمایش شناسه شما و گروه`
+
+▎ ○اطلاعات 
+▎ ●`اطلاعات گروه`
+
+▎ ○لینک جدید
+▎ ●`ساخت لینک جدید`
+
+▎ ○تنظیم لینک
+▎ ●`تنظیم لینک گروه`
+
+▎ ○لینک
+▎ ●`نمایش لینک گروه`
+
+▎ ○لینک پیوی
+▎ ●`ارسال لینک به پیوی شما`
+
+▎ ○تنظیم خوشامد 
+▎ ●`تنظیم خوش آمدگویی`
+
+▎ ○زبان` [فارسی | انگلیسی]`
+▎ ●`تنظیم  زبان فارسی | انگلیسی`
+
+▎ ○دستورات` [فارسی | انگلیسی]`
+▎ ●`تتظیم دستورات فارسی | انگلیسی`
+﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
+🏅سازنده:  and @SudoRadical
+🏅کانال ما:]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3830,7 +4064,7 @@ local text = [[text]]
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helpfunfa' then
-local text = [[*💥راهنما فان (مگا پلاس)*
+local text = [[*💥راهنما فان (رادیڪال بوت)*
 
 ▎  ○ساعت
 ▎ `دریافت ساعت به صورت استیکر`
@@ -3865,9 +4099,9 @@ local text = [[*💥راهنما فان (مگا پلاس)*
 ▎  ○دما `[city]`
 ▎ `دریافت اب وهوا`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅سازنده: @KingLonely and @SajjadMazini
+🏅سازنده:  and @SudoRadical
 🏅کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3886,7 +4120,7 @@ local text = [[*💥راهنما فان (مگا پلاس)*
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helpportfa' then
-local text = [[*💥راهنما درگاه های پرداختی (مگا پلاس)*
+local text = [[*💥راهنما درگاه های پرداختی (رادیڪال بوت)*
 
 ▎ ○درگاه1
 ▎  `دریافت درگاه 1ماهه`
@@ -3906,9 +4140,9 @@ local text = [[*💥راهنما درگاه های پرداختی (مگا پلا
 ▎ ○ شماره کارت
 ▎‌  `دریافت شماره کارت` 
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅سازنده: @KingLonely and @SajjadMazini
+🏅سازنده:  and @SudoRadical
 🏅کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3927,7 +4161,7 @@ local text = [[*💥راهنما درگاه های پرداختی (مگا پلا
     edit_inline(msg.message_id, text, keyboard)
 end
 if matches[1] == '/helpaddfa' then
-local text = [[*💥راهنما ادداجباری گروه (مگا پلاس)*
+local text = [[*💥راهنما ادداجباری گروه (رادیڪال بوت)*
 
 ▎ ○قفل اداجباری
 ▎  `روشن کردن ادد اجباری`
@@ -3944,9 +4178,9 @@ local text = [[*💥راهنما ادداجباری گروه (مگا پلاس)*
 ▎ ○پیام اداجباری {فعال-غیرفعال}
 ▎  `خاموش روشن کردن پیام ادد`
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
-🏅سازنده: @KingLonely and @SajjadMazini
+🏅سازنده:  and @SudoRadical
 🏅کانال ما:
-@MeGaPlusTeaM]]
+@RadicalBotTeam]]
   if not lang then
 		keyboard = {} 
 		keyboard.inline_keyboard = {
@@ -3995,7 +4229,7 @@ if matches[1] == '/exit' then
     if not lang then
 		 text = '*MeGaPlus Group Menu Closed*'
    elseif lang then
-		 text = 'منو ربات (مگا پلاس) بسته شد'
+		 text = 'منو ربات (رادیڪال بوت) بسته شد'
    end
 		edit_inline(msg.message_id, text)
 	end
@@ -4083,7 +4317,7 @@ return {
 		"^###cb:(/whitelist):(.*)$",
 		"^###cb:(/cleanwhitelist):(.*)$",
 		"^###cb:(/silentlist):(.*)$",
-		"^###cb:(/sajjad):(.*)$",
+		"^###cb:(/ghasemi):(.*)$",
 		"^###cb:(/features):(.*)$",
 		"^###cb:(/cardnumber):(.*)$",
 		"^###cb:(/botrules):(.*)$",
