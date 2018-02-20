@@ -62,7 +62,7 @@ deltgbot() {
 mkdir $HOME/.telegram-bot; cat <<EOF > $HOME/.telegram-bot/config
 default_profile = "cli";
 cli = {
-lua_script = "$HOME/MeGaPlus/Cli/bot/bot.lua";
+lua_script = "$HOME/newRadical/Cli/bot/bot.lua";
 };
 EOF
 printf "\nConfig MeGaPlus Has Been Saved.\n"
@@ -109,7 +109,7 @@ install
 exit;;
 
 tdbot)
-printf "New MeGaPlus is Launching...\n"
+printf "New newRadical is Launching...\n"
 print_logo
 logo_play
 megaplus
