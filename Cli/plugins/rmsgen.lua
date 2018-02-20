@@ -23,7 +23,7 @@ end
 for i = 1, 5 do
 tdbot.getChannelMembers(msg.to.id, 0, 50000, "Banned", pro, nil)
 end
-return "`💥Messages Has Been Cleaned`\n`Channel:`\n@MeGaPlusTeaM"
+return "`💥Messages Has Been Cleaned`\n`Channel:`\n@RadicalBotTeam"
 end
 end
 
