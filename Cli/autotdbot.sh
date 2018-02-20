@@ -1,6 +1,6 @@
 #!/bin/bash
 COUNTER=1
 while(true) do
-./megaplus.sh tdbot
+./radical.sh tdbot
 let COUNTER=COUNTER+1 
 done
