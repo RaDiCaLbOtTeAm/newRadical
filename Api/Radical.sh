@@ -14,14 +14,14 @@ sudo luarocks install serpent
 }
 
 function print_logo() {
-	green "┋M┋E┋G┋A┋H┋E┋L┋P┋E┋R┋"
+	green "┋R┋A┋D┋I┋C┋A┋L┋"
 	echo -e "\n\e[0m"
 }
 
 function logo_play() {
     declare -A txtlogo
     seconds="0.010"
-    txtlogo[1]="┋M┋E┋G┋A┋H┋E┋L┋P┋E┋R┋"
+    txtlogo[1]="┋R┋A┋D┋I┋C┋A┋L┋"
     printf "\e[31m\t"
     for i in ${!txtlogo[@]}; do
         for x in `seq 0 ${#txtlogo[$i]}`; do
@@ -41,7 +41,7 @@ function megaplusteam() {
 	white "     >>>>                       We Are Programmer                               "
 	white "     >>>>                       We Are The Best                                 "
 	red   "     >>>>                       We Are Family                                   "
-	red   "     >>>>                       @MeGaPlusTeaM                                     "
+	red   "     >>>>                       @RADICALBOTTEAM                                    "
 	echo -e "\e[0m"
 }
 
@@ -72,7 +72,7 @@ else
 	print_logo
 	megaplusteam
 	logo_play
-	green "MeGaPlus Helper Bot running..."
+	green "RaDiCal Helper Bot running..."
 	#sudo service redis-server restart
 	lua ./bot/bot.lua
 fi
