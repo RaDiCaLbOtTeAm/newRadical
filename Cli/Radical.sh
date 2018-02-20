@@ -24,14 +24,14 @@ install() {
 		chmod +x autotdbot.sh
 }
 function print_logo() {
-	green "[̲̅M̲̅][̲̅E̲̅][̲̅G̲̅][̲̅A̲̅][̲̅P̲̅][̲̅L̲̅][̲̅U̲̅][̲̅S̲̅]"
+	green "┋R┋A┋D┋I┋C┋A┋L┋"
 	echo -e "\n\e[0m"
 }
 
 function logo_play() {
     declare -A txtlogo
     seconds="0.010"
-    txtlogo[1]="[̲̅M̲̅][̲̅E̲̅][̲̅G̲̅][̲̅A̲̅][̲̅P̲̅][̲̅L̲̅][̲̅U̲̅][̲̅S̲̅]"
+    txtlogo[1]="┋R┋A┋D┋I┋C┋A┋L┋"
     printf "\e[31m\t"
     for i in ${!txtlogo[@]}; do
         for x in `seq 0 ${#txtlogo[$i]}`; do
